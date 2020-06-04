@@ -1,6 +1,6 @@
 # docker-ztj1993-sshd
 
-sshd 基础映像，使用的 panubo/docker-sshd 1.2.0 构建。
+sshd 基础映像
 
 ## 相关链接
 - [GitHub](https://github.com/ztj-docker/sshd)
@@ -16,6 +16,11 @@ docker run -ti --rm ztj1993/sshd
 - ROOT_PASSWORD：根用户密码
 
 ## 更新日志
+
+> 2020-06-04
+
+- 使用 alpine:3.11.6 基础镜像
+- 使用自带的 openssh-server
 
 > 2020-05-13
 
