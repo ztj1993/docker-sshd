@@ -5,7 +5,11 @@ sshd 基础映像
 ## 相关链接
 - [GitHub](https://github.com/ztj-docker/sshd)
 - [DockerHub](https://hub.docker.com/r/ztj1993/sshd)
-- [Panubo](https://github.com/panubo/docker-sshd)
+
+## 构建教程
+```
+docker build -t ztj1993/sshd .
+```
 
 ## 使用教程
 ```
@@ -13,9 +17,14 @@ docker run -ti --rm ztj1993/sshd
 ```
 
 ## 环境变量
-- ROOT_PASSWORD：根用户密码
+- SSH_ROOT_PASSWORD：根用户密码
 
 ## 更新日志
+
+> 2020-07-15
+
+- 重构项目
+- 实现修改 root 密码
 
 > 2020-06-04
 

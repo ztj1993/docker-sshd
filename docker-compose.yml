@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ssh:
+    image: ztj1993/sshd:latest
+    environment:
+      - SSH_ROOT_PASSWORD=1234567
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    expose:
+      - 22/tcp
+    ports:
+      - 22/tcp
