@@ -16,10 +16,12 @@ docker build -t ztj1993/sshd .
 docker run -ti --rm ztj1993/sshd
 ```
 
-## 环境变量
-- SSH_ROOT_PASSWORD：根用户密码
-
 ## 更新日志
+
+> 2020-11-16
+
+- 采用 ubuntu:20.10 镜像
+- 默认密码 123456
 
 > 2020-07-15
 
