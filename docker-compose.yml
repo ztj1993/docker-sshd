@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ztj1993/sshd:latest
+    environment:
+      - ROOT_INIT_PASSWORD=1234567
     privileged: true
     volumes:
       - /etc/timezone:/etc/timezone:ro
@@ -12,4 +13,4 @@ services:
     expose:
       - 22/tcp
     ports:
-      - 22/tcp
+      - 2022:22/tcp
