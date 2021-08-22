@@ -8,15 +8,20 @@ sshd 基础映像
 
 ## 构建教程
 ```
-docker build -t ztj1993/sshd .
+docker build -t ztj1993/sshd:latest .
 ```
 
 ## 使用教程
 ```
-docker run -ti --rm ztj1993/sshd
+docker run -ti --rm ztj1993/sshd:latest
 ```
 
 ## 更新日志
+
+> 2021-08-22
+
+- 增加自动构建
+- 优化打包
 
 > 2021-01-14
 

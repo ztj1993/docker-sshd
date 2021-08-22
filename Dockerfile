@@ -4,6 +4,8 @@ LABEL maintainer="Ztj <ztj1993@gmail.com>"
 
 ENV ROOT_INIT_PASSWORD="123456"
 
+ADD entrypoint.sh /
+
 RUN apt-get -y update \
   && apt-get install -y openssh-server \
   && rm -rf /var/lib/apt/lists/* \
@@ -14,10 +16,9 @@ RUN apt-get -y update \
   && sed -i "s@^PasswordAuthentication.*@PasswordAuthentication yes@" /etc/ssh/sshd_config \
   && sed -i "s@^AllowTcpForwarding.*@AllowTcpForwarding yes@" /etc/ssh/sshd_config \
   && sed -i "s@^GatewayPorts.*@GatewayPorts yes@" /etc/ssh/sshd_config \
-  && echo "root:123456" | chpasswd
+  && echo "root:123456" | chpasswd \
+  && RUN chmod +x /entrypoint.sh
 
-ADD entrypoint.sh /
-RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 22

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -f /var/log/init-password ]; then
   touch /var/log/init-password
