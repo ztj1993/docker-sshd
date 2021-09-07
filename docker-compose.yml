@@ -13,4 +13,4 @@ services:
     expose:
       - 22/tcp
     ports:
-      - 2022:22/tcp
+      - 22/tcp
